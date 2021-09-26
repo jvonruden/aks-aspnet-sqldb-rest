@@ -39,8 +39,8 @@ namespace ClaimsApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddDbContext<ClaimsContext>(opt => opt.UseInMemoryDatabase("ClaimItems"));
-            services.AddDbContext<ClaimsContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("SqlServerDb")));
+            services.AddDbContext<ClaimsContext>(opt => opt.UseInMemoryDatabase("ClaimItems"));
+            // services.AddDbContext<ClaimsContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("SqlServerDb")));
             services.AddControllers();
             // services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2); ID11092019.o
 
